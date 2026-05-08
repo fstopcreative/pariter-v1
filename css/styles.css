@@ -1,0 +1,29 @@
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+}
+
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.dropdown-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-toggle .dropdown-chevron {
+    transition: transform 0.2s ease;
+}
+
+.dropdown-toggle.is-active .dropdown-chevron {
+    transform: rotate(180deg);
+}
