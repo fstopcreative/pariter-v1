@@ -42,8 +42,19 @@ function initMobileMenu() {
     const panel = document.querySelector('[data-mobile-menu]');
     if (!trigger || !panel) return;
 
+    const icon = trigger.querySelector('.material-symbols-outlined');
+
+    const setOpen = (open) => {
+        panel.classList.toggle('hidden', !open);
+        trigger.setAttribute('aria-expanded', String(open));
+        if (icon) icon.textContent = open ? 'close' : 'menu';
+    };
+
     trigger.addEventListener('click', () => {
-        const isOpen = panel.classList.toggle('hidden');
-        trigger.setAttribute('aria-expanded', String(!isOpen));
+        setOpen(panel.classList.contains('hidden'));
+    });
+
+    panel.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => setOpen(false));
     });
 }

@@ -27,3 +27,10 @@ body {
 .dropdown-toggle.is-active .dropdown-chevron {
     transform: rotate(180deg);
 }
+
+@media (max-width: 767px) {
+    .px-gutter {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
