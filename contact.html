@@ -82,20 +82,21 @@ Our Services
 </div>
 </div>
 <div class="bg-white p-8 md:p-12 rounded-xl text-on-surface shadow-2xl">
-<form class="space-y-6">
+<form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+<input type="hidden" name="access_key" value="506e0e98-81a4-41fe-8155-5c021765222d"/>
 <div class="space-y-2">
 <label class="text-label-caps font-label-caps text-primary/70 font-bold">Full Name</label>
-<input class="w-full bg-surface-container-low border-outline-variant/50 focus:border-primary focus:ring-primary focus:ring-1 px-4 py-3 rounded-DEFAULT transition-all" placeholder="Your Name" type="text"/>
+<input class="w-full bg-surface-container-low border-outline-variant/50 focus:border-primary focus:ring-primary focus:ring-1 px-4 py-3 rounded-DEFAULT transition-all" name="name" placeholder="Your Name" type="text" required/>
 </div>
 <div class="space-y-2">
 <label class="text-label-caps font-label-caps text-primary/70 font-bold">Email Address</label>
-<input class="w-full bg-surface-container-low border-outline-variant/50 focus:border-primary focus:ring-primary focus:ring-1 px-4 py-3 rounded-DEFAULT transition-all" placeholder="email@company.com" type="email"/>
+<input class="w-full bg-surface-container-low border-outline-variant/50 focus:border-primary focus:ring-primary focus:ring-1 px-4 py-3 rounded-DEFAULT transition-all" name="email" placeholder="email@company.com" type="email" required/>
 </div>
 <div class="space-y-2">
 <label class="text-label-caps font-label-caps text-primary/70 font-bold">Enquiry Details</label>
-<textarea class="w-full bg-surface-container-low border-outline-variant/50 focus:border-primary focus:ring-primary focus:ring-1 px-4 py-3 rounded-DEFAULT transition-all" placeholder="How can we help?" rows="4"></textarea>
+<textarea class="w-full bg-surface-container-low border-outline-variant/50 focus:border-primary focus:ring-primary focus:ring-1 px-4 py-3 rounded-DEFAULT transition-all" name="message" placeholder="How can we help?" rows="4" required></textarea>
 </div>
-<button class="w-full bg-primary text-on-primary py-4 rounded-DEFAULT font-button text-button hover:bg-on-primary-fixed-variant transition-all shadow-md">
+<button type="submit" class="w-full bg-primary text-on-primary py-4 rounded-DEFAULT font-button text-button hover:bg-on-primary-fixed-variant transition-all shadow-md">
                                 Submit Enquiry
                             </button>
 </form>
